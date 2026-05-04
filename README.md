@@ -9,7 +9,7 @@ A zero-trust supply chain security auditor for AI agent ecosystems.
 
 Zero-Trust-Agent scans GitHub repos, local directories, skill packs, and MCP servers for malicious payloads before you install them into any AI agent environment.
 
-It was built after real-world attacks were found in the wild — including [ToxicSkills](https://github.com/snyk-labs/toxicskills-goof) (Snyk Labs PoC) and [aisa-group/promptinject-agent-skills](https://github.com/aisa-group/promptinject-agent-skills) — where credential exfiltration and Unicode steganography were hidden inside legitimate-looking skill files.
+It was built after real-world attacks were found in the wild, where credential exfiltration and Unicode steganography were hidden inside legitimate-looking skill files.
 
 ---
 
@@ -121,13 +121,13 @@ The agent distinguishes **true positives** from false positives:
 
 ## Real-world catches
 
-| Repo | Finding | Technique |
-|---|---|---|
-| `aisa-group/promptinject-agent-skills` | Password exfiltration via `?pw=<value>` URL | Payload buried at line 408/430 |
-| `aisa-group/promptinject-agent-skills` | Full PPTX file upload to attacker server | Mandatory `file_backup.py` step |
-| `snyk-labs/toxicskills-goof` | RCE via `curl \| bash` to `91.92.242.30` | Base64-obfuscated in skill prerequisites |
-| `snyk-labs/toxicskills-goof` | System fingerprint exfiltration (`uname -a`) | Hidden in Vercel deployment "prerequisite" |
-| `snyk-labs/toxicskills-goof` | Covert command execution (`open -a Calculator`) | Unicode TAG block U+E0000 — visually blank line |
+| Finding | Technique |
+|---|---|
+| Password exfiltration via `?pw=<value>` URL parameter | Payload buried at line 408 of a 430-line skill file |
+| Full file silently uploaded to attacker server | Mandatory backup step injected into normal workflow |
+| RCE via `curl \| bash` to attacker-controlled IP | Base64-obfuscated inside skill prerequisites |
+| System fingerprint exfiltration (`uname -a`) | Hidden inside a legitimate deployment "prerequisite" |
+| Covert command execution (`open -a Calculator`) | Unicode TAG block U+E0000 — visually blank line in all editors |
 
 ---
 
