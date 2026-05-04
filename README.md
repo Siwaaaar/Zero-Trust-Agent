@@ -73,29 +73,27 @@ Claude will automatically clone the repo, run the scanner, deep-read all flagged
 
 ### Scanner CLI (standalone)
 
-The agent embeds `claude-safety-check.py` and auto-writes it on first run. You can also use it directly:
+The agent embeds the scanner and auto-writes it to `~/scripts/claude-safety-check.py` on first run. You can then use it directly:
 
 ```bash
 # Scan a cloned repo
-python3 claude-safety-check.py /path/to/repo
+python3 ~/scripts/claude-safety-check.py /path/to/repo
 
 # Scan a single file
-python3 claude-safety-check.py suspicious-skill.md
+python3 ~/scripts/claude-safety-check.py suspicious-skill.md
 
 # Only show HIGH and above
-python3 claude-safety-check.py . --min-severity HIGH
+python3 ~/scripts/claude-safety-check.py . --min-severity HIGH
 
 # JSON output (for piping / CI)
-python3 claude-safety-check.py . --json
+python3 ~/scripts/claude-safety-check.py . --json
 
 # List all detection rules
-python3 claude-safety-check.py --list-rules
+python3 ~/scripts/claude-safety-check.py --list-rules
 
 # No ANSI colors (for logs)
-python3 claude-safety-check.py . --no-color
+python3 ~/scripts/claude-safety-check.py . --no-color
 ```
-
-Exit codes: `0` = clean · `1` = findings · `2` = error
 
 ---
 
