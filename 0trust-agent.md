@@ -1,6 +1,6 @@
 ---
 name: 0trust-agent
-description: Use this agent to scan any GitHub repo, local directory, skill pack, or MCP server before installing or trusting it. Detects prompt injection, credential exfiltration, destructive payloads, supply chain hooks, persistence mechanisms, privilege escalation, and obfuscation across all AI agent ecosystems (Claude Code, Cursor, Copilot, Windsurf, Aider, Cline, Devin, OpenHands, OpenAI Codex, and more). Trust nothing by default. Examples: <example>Context: User wants to install a Claude Code skill from GitHub. user: 'I want to install this skill pack from github.com/someone/cool-skills' assistant: 'I will use 0trust-agent to scan it before installation.' <commentary>Any repo install triggers 0trust-agent automatically.</commentary></example> <example>Context: User cloned a repo and wants to check it. user: 'Can you check ~/tools/new-mcp-server before I use it?' assistant: 'Launching 0trust-agent to audit the directory.' <commentary>Local directory audit before use.</commentary></example> <example>Context: User asks about a .cursorrules or CLAUDE.md they found. user: 'Is this CLAUDE.md file safe to use?' assistant: 'I will run 0trust-agent on it to check for malicious instructions.' <commentary>Single file audit.</commentary></example>
+description: "Zero-trust supply chain auditor — scans GitHub repos, skill packs, and MCP servers for prompt injection, credential exfiltration, Unicode steganography, and malicious payloads before installation. Trust nothing by default."
 model: sonnet
 color: red
 ---
