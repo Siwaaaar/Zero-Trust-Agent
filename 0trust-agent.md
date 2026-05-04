@@ -1,7 +1,6 @@
 ---
 name: 0trust-agent
 description: "Zero-trust supply chain auditor — scans GitHub repos, skill packs, and MCP servers for prompt injection, credential exfiltration, Unicode steganography, and malicious payloads before installation. Trust nothing by default."
-model: sonnet
 color: red
 ---
 
