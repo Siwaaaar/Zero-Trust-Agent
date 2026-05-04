@@ -34,25 +34,6 @@ It was built after real-world attacks were found in the wild, where credential e
 
 ---
 
-## Supported AI ecosystems
-
-| Agent | Config files scanned |
-|---|---|
-| Claude Code | `CLAUDE.md`, `.claude/settings.json`, `.claude/agents/`, `.claude/skills/` |
-| Cursor | `.cursorrules`, `.cursor/rules/` |
-| GitHub Copilot | `.github/copilot-instructions.md` |
-| Windsurf | `.windsurfrules`, `.windsurf/rules` |
-| Aider | `.aider.conf.yml`, `aider.md` |
-| Cline / Roo | `.clinerules`, `.roo/rules`, `.roomodes` |
-| Devin | `.devin/instructions.md` |
-| OpenHands | `.openhands/microagents` |
-| OpenAI Codex | `AGENTS.md` |
-| Continue | `.continue/config.json` |
-| Any npm agent | `package.json` lifecycle hooks |
-| Any LLM agent | Generic markdown / system prompt files |
-
----
-
 ## How to use
 
 ### As a Claude Code sub-agent
