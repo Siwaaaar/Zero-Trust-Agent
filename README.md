@@ -34,6 +34,16 @@ It was built after real-world attacks were found in the wild, where credential e
 
 ---
 
+## Auto-trigger behavior
+
+When installed as a Claude Code agent, Zero-Trust-Agent triggers automatically when:
+- A GitHub URL is pasted alongside install intent
+- A user asks to install a skill, MCP server, Cursor rule, or agent tool
+- A suspicious `CLAUDE.md`, `.cursorrules`, or `AGENTS.md` is found
+- A user asks "is this safe?"
+
+---
+
 ## How to use
 
 ### As a Claude Code sub-agent
@@ -114,13 +124,3 @@ The agent distinguishes **true positives** from false positives:
 
 - Python 3.9+
 - No external dependencies (stdlib only)
-
----
-
-## Auto-trigger behavior
-
-When installed as a Claude Code agent, Zero-Trust-Agent triggers automatically when:
-- A GitHub URL is pasted alongside install intent
-- A user asks to install a skill, MCP server, Cursor rule, or agent tool
-- A suspicious `CLAUDE.md`, `.cursorrules`, or `AGENTS.md` is found
-- A user asks "is this safe?"
